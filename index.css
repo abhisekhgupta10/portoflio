@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Roboto:wght@100;300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%),
+    url(bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  clip-path: circle(180vh at 50% -85vh);
+}
+
+.navbar {
+  width: 100%;
+  padding: 15px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  color: white;
+  font-size: 1.8rem;
+}
+.logo span {
+  color: #3185fc;
+  letter-spacing: -1px;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 15px;
+  padding: 5px;
+  border-radius: 12px;
+  transition: all 0.9s;
+}
+
+.navbar ul li a:hover {
+  background-color: #3185fc;
+}
+#bar {
+  color: white;
+  font-size: 1.3rem;
+  display: none;
+}
+
+@media (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.537);
+  }
+  .navbar ul {
+    display: block;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.537);
+    left: -200px;
+    top: 12.7%;
+    transition: all 0.5s;
+  }
+  #bar {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar li {
+    margin-top: 15px;
+  }
+  .text {
+    font-size: 5rem;
+  }
+  .hero-text {
+    font-size: 1.8rem;
+  }
+  .desc {
+    font-size: 1.1rem;
+  }
+  .about-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1%;
+  }
+  .about-text h2 {
+    color: #3185fc;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .about-text p {
+    text-align: left;
+    font-size: 0.5rem;
+  }
+  .about-text-content {
+    margin: 0;
+  }
+  .skill-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .html,
+  .css {
+    margin-bottom: 10px;
+  }
+ 
+}
+.text-animation {
+  padding: 5px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  font-size: 9rem;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  background: url(back.png);
+  background-position: 5px 0;
+  -webkit-background-clip: text;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  100% {
+    background-position: 3000px 0;
+  }
+}
+
+.hero-text {
+  color: white;
+  font-size: 2rem;
+}
+.desc {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 35px;
+}
+
+.text-animation a {
+  color: white;
+  border: 1px solid white;
+  padding: 15px;
+  font-size: 20px;
+  transition: all 0.9s;
+}
+
+.text-animation a:hover {
+  background-color: #3185fc;
+}
+
+.about-container {
+  padding: 2% 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+  width: 100%;
+  height: fit-content;
+}
+.about-text-content {
+  margin-top: 30px;
+}
+.photo {
+  width: fit-content;
+}
+.about-text {
+  width: fit-content;
+  padding: 10px;
+}
+.about-container img {
+  border-radius: 50%;
+  width: 340px;
+  height: 340px;
+}
+
+.about h1 {
+  text-align: center;
+  padding: 15px;
+  font-size: 2.1rem;
+}
+.about-text h2 {
+  color: #3185fc;
+  font-size: 1.8rem;
+}
+
+.about-text p {
+  padding-top: 5px;
+  font-size: 1.2rem;
+}
+.skills h1 {
+  text-align: center;
+  font-size: 2.1rem;
+}
+.skill-container {
+  padding: 2% 10%;
+  flex-direction: row;
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+}
+.html {
+  text-align:center;
+  padding:20px 30px;
+  width:300px;
+  height:300px;
+  background-color: rgb(231, 230, 227);
+  font-size: 1.8rem;
+  transition: all 1s;
+}
+.css {
+  width: 300px;
+  height: 300px;
+  background-color: #3185fc;
+  padding:20px 30px;
+  transition: all 1s;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.js {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(231, 230, 227);
+  padding:20px 30px;
+  transition: all 1s;
+  font-size: 1.3rem;
+}
+.js:hover {
+  width: 300px;
+  height: 350px;
+  box-shadow: -5px 0px 30px rgba(32, 31, 31, 0.582);
+}
+.css:hover {
+  width: 300px;
+  height: 350px;
+  box-shadow: -5px 0px 30px rgba(32, 31, 31, 0.582);
+}
+.html:hover {
+  width: 300px;
+  height: 350px;
+  box-shadow: -5px 0px 30px rgba(32, 31, 31, 0.582);
+}
+.footer-container {
+  width: 100%;
+
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.collab {
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 5px;
+}
+.collab form input {
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#Submit {
+  width: 50%;
+  margin: 10px auto;
+  font-size: 20px;
+  transition: all 1s;
+}
+.collab h1 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+#Submit:hover {
+  background-color: #3185fc;
+}
+.follow {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 5px;
+}
+
+.follow h1 {
+  text-align: center;
+  color: white;
+  padding-bottom: 5px;
+}
+
+.fa-brands {
+  font-size: 30px;
+  margin: 10px;
+  color: white;
+}
+.fa-brands:hover {
+  color: #3185fc;
+}
+.contact {
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.contact img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.contact p {
+  color: white;
+}
+.footer p {
+  text-align: center;
+ color:black;
+}
+.a{
+    font-size:20px;
+    font-weight:500;
+   
+}
